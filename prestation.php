@@ -16,7 +16,7 @@ if(isset($_POST["prix"]))      $prix=$_POST["prix"];
 if(isset($_POST["description"]))      $description=$_POST["description"];
 
 try
-{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'Blacksamba2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'password', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
 catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 $objid = $bdd->query("SELECT appelant_id_appelant FROM dossier WHERE N°_dossier = '$num_dossier' ");
