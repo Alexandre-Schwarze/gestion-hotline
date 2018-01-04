@@ -8,7 +8,7 @@ $password = $_POST["password"];
 
 // connexion serveur/bdd
 try
-{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'Blacksamba2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'password', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
 catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 
