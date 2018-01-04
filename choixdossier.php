@@ -6,7 +6,7 @@ include "membre.php";
 if(isset($_POST["dossier"])  && $_POST['dossier'] == 'Valider') {
 if(isset($_POST["num_dossier"])) $num_dossier = $_POST["num_dossier"];
 try
-{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'Blacksamba2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'password', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
 catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 
@@ -31,7 +31,7 @@ $_SESSION['num_dossier']=$num_dossier;
 elseif ($verif_dossier[0] == 1){
 
 try
-{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'Blacksamba2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+{$bdd = new PDO('mysql:host=localhost:3309;dbname=hotline', 'root', 'password', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
 catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 $objid = $bdd->query("SELECT appelant_id_appelant FROM dossier WHERE N°_dossier = '$num_dossier' ");
